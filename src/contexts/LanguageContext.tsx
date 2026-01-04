@@ -16,13 +16,13 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.waitlist': 'Join Waitlist',
     
     // Hero
-    'hero.tagline': 'Your AI Doer — Stay focused on what matters',
     'hero.title.1': 'Let AI handle the',
     'hero.title.2': 'repetitive work',
     'hero.title.3': 'in your browser',
     'hero.description': 'AI Doer is a local AI agent that uses your own browser to get real work done. No scripts. No manual setup. Just tell it what to do.',
     'hero.cta': 'Join the Waitlist',
     'hero.cta.sub': 'Free during beta · No spam',
+    'hero.mockup.ready': 'Ready to execute your tasks',
     
     // Problem
     'problem.title': 'What problem are we solving?',
@@ -44,7 +44,6 @@ const translations: Record<Language, Record<string, string>> = {
     'different.no2': 'No fragile scripts',
     'different.no3': 'No cloud browser pretending to be your computer',
     'different.how': 'AI Doer runs locally and uses your browser like a human assistant would.',
-    'different.describe': 'You describe the task in natural language.',
     'different.execute': 'AI Doer opens the browser, understands the UI, and executes the steps.',
     
     // For Who
@@ -111,6 +110,16 @@ const translations: Record<Language, Record<string, string>> = {
     'local.item4': 'No simulated environments',
     'local.note': 'What you see is what AI Doer sees.',
     
+    // Download
+    'download.title': 'Download AI Doer',
+    'download.subtitle': 'Get started with AI Doer on your device',
+    'download.windows': 'Windows',
+    'download.mac': 'macOS',
+    'download.android': 'Android',
+    'download.scanQR': 'Scan QR code to download',
+    'download.pcNote': 'Visit this page on PC to download Windows or Mac version',
+    'download.mobileNote': 'Visit this page on mobile to get the Android app',
+    
     // CTA
     'cta.title': 'Early access',
     'cta.desc': 'AI Doer is currently in private beta.',
@@ -137,13 +146,13 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.waitlist': '加入等待列表',
     
     // Hero
-    'hero.tagline': '你的 AI 执行者 — 专注于真正重要的事',
     'hero.title.1': '让 AI 处理',
     'hero.title.2': '重复性工作',
     'hero.title.3': '在你的浏览器中',
     'hero.description': 'AI Doer 是一个本地 AI 代理，使用你自己的浏览器完成实际工作。无需脚本，无需手动设置。只需告诉它要做什么。',
     'hero.cta': '加入等待列表',
     'hero.cta.sub': '测试期免费 · 无垃圾邮件',
+    'hero.mockup.ready': '准备执行你的任务',
     
     // Problem
     'problem.title': '我们在解决什么问题？',
@@ -165,7 +174,6 @@ const translations: Record<Language, Record<string, string>> = {
     'different.no2': '没有脆弱的脚本',
     'different.no3': '没有假装成你电脑的云端浏览器',
     'different.how': 'AI Doer 在本地运行，像人类助手一样使用你的浏览器。',
-    'different.describe': '你用自然语言描述任务。',
     'different.execute': 'AI Doer 打开浏览器，理解界面，执行步骤。',
     
     // For Who
@@ -231,6 +239,16 @@ const translations: Record<Language, Record<string, string>> = {
     'local.item3': '更低成本',
     'local.item4': '没有模拟环境',
     'local.note': '你看到的就是 AI Doer 看到的。',
+    
+    // Download
+    'download.title': '下载 AI Doer',
+    'download.subtitle': '在你的设备上开始使用 AI Doer',
+    'download.windows': 'Windows',
+    'download.mac': 'macOS',
+    'download.android': 'Android',
+    'download.scanQR': '扫描二维码下载',
+    'download.pcNote': '在电脑上访问此页面下载 Windows 或 Mac 版本',
+    'download.mobileNote': '在手机上访问此页面获取 Android 应用',
     
     // CTA
     'cta.title': '抢先体验',

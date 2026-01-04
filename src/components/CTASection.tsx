@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Sparkles } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
 const CTASection = () => {
@@ -25,7 +25,7 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="waitlist" className="py-24 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card to-transparent" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
@@ -33,10 +33,6 @@ const CTASection = () => {
 
       <div className="container mx-auto px-6 relative">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">Private Beta</span>
-          </div>
 
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             {t('cta.title')}

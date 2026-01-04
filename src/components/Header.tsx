@@ -35,7 +35,17 @@ const Header = () => {
               <Globe className="w-4 h-4" />
               {language === 'en' ? '中文' : 'EN'}
             </Button>
-            <Button variant="hero" size="sm" className="hidden sm:flex">
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="hidden sm:flex"
+              onClick={() => {
+                const element = document.getElementById('waitlist');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               {t('nav.waitlist')}
             </Button>
           </div>

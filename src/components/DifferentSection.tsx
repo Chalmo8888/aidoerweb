@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { X, Check, Monitor, MessageSquare, Zap } from 'lucide-react';
+import { X, Check, Zap } from 'lucide-react';
 
 const DifferentSection = () => {
   const { t } = useLanguage();
@@ -48,25 +48,12 @@ const DifferentSection = () => {
               <p className="text-lg font-medium">{t('different.how')}</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                  <MessageSquare className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-medium mb-1">Step 1</p>
-                  <p className="text-muted-foreground">{t('different.describe')}</p>
-                </div>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
+                <Zap className="w-6 h-6 text-primary" />
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                  <Zap className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="font-medium mb-1">Step 2</p>
-                  <p className="text-muted-foreground">{t('different.execute')}</p>
-                </div>
+              <div>
+                <p className="text-muted-foreground">{t('different.execute')}</p>
               </div>
             </div>
           </div>
