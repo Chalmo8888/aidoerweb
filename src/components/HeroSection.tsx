@@ -33,9 +33,6 @@ const HeroSection = () => {
                 {t('hero.cta')}
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="#features">{t('hero.learnMore')}</a>
-              </Button>
             </div>
             
             <p className="text-sm text-muted-foreground mt-4">

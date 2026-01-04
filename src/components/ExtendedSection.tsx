@@ -29,9 +29,6 @@ const ExtendedSection = () => {
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
             {t('extended.title')}
           </h2>
-          <p className="text-lg text-muted-foreground">
-            {t('extended.subtitle')}
-          </p>
         </div>
 
         {/* Engine badge */}
