@@ -19,10 +19,9 @@ const HeroSection = () => {
           {/* Left: Content */}
           <div className="text-center lg:text-left">
             <h1 className="font-heading text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight text-foreground">
-              {t('hero.title.1')}{' '}
-              <span className="text-primary">{t('hero.title.2')}</span>
+              {t('hero.title.1')}
               <br />
-              {t('hero.title.3')}
+              {t('hero.title.2')}
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">

@@ -18,8 +18,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Hero - Optimized for conversion
     'hero.title.1': 'Delegate browser work to AI.',
-    'hero.title.2': '',
-    'hero.title.3': 'Keep your focus on what matters.',
+    'hero.title.2': 'Keep your focus on what matters.',
     'hero.description': 'Describe the task once. AI Doer executes it in your local browser. No scripts. No setup. Runs locally.',
     'hero.cta': 'Join the Waitlist',
     'hero.cta.sub': 'Free during beta · No spam',
@@ -168,8 +167,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Hero - Optimized for conversion
     'hero.title.1': '把浏览器工作交给 AI。',
-    'hero.title.2': '',
-    'hero.title.3': '专注于真正重要的事。',
+    'hero.title.2': '专注于真正重要的事。',
     'hero.description': '描述一次任务。AI Doer 在你的本地浏览器中执行。无需脚本，无需设置，本地运行。',
     'hero.cta': '申请内测',
     'hero.cta.sub': '测试期免费 · 无垃圾邮件',
