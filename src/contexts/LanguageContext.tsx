@@ -167,7 +167,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Hero - Optimized for conversion (判断式，非功能说明)
     'hero.title.1': '把浏览器里的执行工作，交给 AI。',
-    'hero.title.2': '',
+    'hero.title.2': '专注真正重要的事。',
     'hero.description': '你只负责描述任务，AI Doer 在你的本地浏览器中完成执行。',
     'hero.cta': '申请内测',
     'hero.cta.sub': '不写脚本，不搭流程。像委派给一个真正会用浏览器的助手。',
