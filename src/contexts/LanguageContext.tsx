@@ -131,12 +131,13 @@ const translations: Record<Language, Record<string, string>> = {
     // Download
     'download.title': 'Download AI Doer',
     'download.subtitle': 'Get started with AI Doer on your device',
+    'download.desktop': 'Desktop',
     'download.windows': 'Windows',
     'download.mac': 'macOS',
-    'download.android': 'Android',
-    'download.scanQR': 'Scan QR code to download',
-    'download.pcNote': 'Visit this page on PC to download Windows or Mac version',
-    'download.mobileNote': 'Visit this page on mobile to get the Android app',
+    'download.or': 'or',
+    'download.mobileApp': 'Mobile App',
+    'download.scanToDownload': 'Scan to download the official Android app',
+    'download.officialOnly': 'Official app only · No data collection',
     
     // CTA - With Urgency
     'cta.title': 'Early access',
@@ -280,12 +281,13 @@ const translations: Record<Language, Record<string, string>> = {
     // Download
     'download.title': '下载 AI Doer',
     'download.subtitle': '在你的设备上开始使用 AI Doer',
+    'download.desktop': '桌面端',
     'download.windows': 'Windows',
     'download.mac': 'macOS',
-    'download.android': 'Android',
-    'download.scanQR': '扫描二维码下载',
-    'download.pcNote': '在电脑上访问此页面下载 Windows 或 Mac 版本',
-    'download.mobileNote': '在手机上访问此页面获取 Android 应用',
+    'download.or': '或',
+    'download.mobileApp': '移动应用',
+    'download.scanToDownload': '扫码下载官方 Android 应用',
+    'download.officialOnly': '仅用于下载官方应用 · 不收集个人信息',
     
     // CTA - With Urgency
     'cta.title': '抢先体验',
