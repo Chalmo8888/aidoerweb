@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { MessageSquare, Repeat, Layers, Brain, Check, Sparkles } from 'lucide-react';
+import { MessageSquare, Repeat, Layers, Brain, Check } from 'lucide-react';
 
 const FeaturesSection = () => {
   const { t } = useLanguage();
@@ -43,10 +43,6 @@ const FeaturesSection = () => {
 
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">Core Features</span>
-          </div>
           <h2 className="font-heading text-4xl md:text-5xl font-bold">
             {t('features.title')}
           </h2>
