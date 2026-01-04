@@ -1,17 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { MessageSquare, Repeat, Layers, Brain, Check, Sparkles } from 'lucide-react';
+import { Repeat, Layers, Brain, Check, Sparkles } from 'lucide-react';
 
 const FeaturesSection = () => {
   const { t } = useLanguage();
 
   const features = [
-    {
-      icon: MessageSquare,
-      title: t('feature1.title'),
-      desc: t('feature1.desc'),
-      items: [t('feature1.item1'), t('feature1.item2'), t('feature1.item3')],
-      note: t('feature1.best'),
-    },
     {
       icon: Repeat,
       title: t('feature2.title'),

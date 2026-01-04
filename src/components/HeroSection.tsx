@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -19,12 +19,6 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Tagline */}
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 animate-fade-up">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">{t('hero.tagline')}</span>
-          </div>
-
           {/* Main headline */}
           <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-up" style={{ animationDelay: '0.1s' }}>
             {t('hero.title.1')}{' '}
@@ -40,7 +34,18 @@ const HeroSection = () => {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <Button variant="hero" size="xl" className="group">
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="group"
+              onClick={() => {
+                const emailInput = document.getElementById('waitlist-email');
+                if (emailInput) {
+                  emailInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  setTimeout(() => emailInput.focus(), 500);
+                }
+              }}
+            >
               {t('hero.cta')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
