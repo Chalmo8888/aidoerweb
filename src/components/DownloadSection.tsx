@@ -1,6 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Download, Monitor, Apple, Smartphone, Shield } from 'lucide-react';
+import { Download, Monitor, Smartphone, Shield } from 'lucide-react';
+import windowsLogo from '@/assets/windows-logo.png';
+import macosLogo from '@/assets/macos-logo.png';
 
 const DownloadSection = () => {
   const { t } = useLanguage();
@@ -34,7 +36,7 @@ const DownloadSection = () => {
                 className="min-w-[200px] h-14 text-base"
                 onClick={() => window.open('#', '_blank')}
               >
-                <Monitor className="w-5 h-5 mr-2" />
+                <img src={windowsLogo} alt="Windows" className="w-5 h-5 mr-2" />
                 {t('download.windows')}
                 <Download className="w-4 h-4 ml-2" />
               </Button>
@@ -44,7 +46,7 @@ const DownloadSection = () => {
                 className="min-w-[200px] h-14 text-base"
                 onClick={() => window.open('#', '_blank')}
               >
-                <Apple className="w-5 h-5 mr-2" />
+                <img src={macosLogo} alt="macOS" className="w-5 h-5 mr-2" />
                 {t('download.mac')}
                 <Download className="w-4 h-4 ml-2" />
               </Button>
