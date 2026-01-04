@@ -1,19 +1,24 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { X, Check } from 'lucide-react';
 
 const DifferentSection = () => {
   const { t } = useLanguage();
 
-  const nots = [
-    t('different.no1'),
-    t('different.no2'),
-    t('different.no3'),
+  const dontBelieve = [
+    t('different.dont1'),
+    t('different.dont2'),
+    t('different.dont3'),
+  ];
+
+  const believe = [
+    t('different.believe1'),
+    t('different.believe2'),
+    t('different.believe3'),
   ];
 
   return (
     <section className="py-24 border-t border-border">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4">
             {t('different.title')}
           </h2>
@@ -21,33 +26,43 @@ const DifferentSection = () => {
             {t('different.subtitle')}
           </p>
 
-          {/* What it's NOT */}
-          <div className="grid sm:grid-cols-3 gap-4 mb-10">
-            {nots.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 p-4 bg-card border border-border rounded-lg"
-              >
-                <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center flex-shrink-0">
-                  <X className="w-4 h-4 text-destructive" />
-                </div>
-                <p className="text-sm text-muted-foreground">{item}</p>
+          {/* Two Column Comparison */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Left: What we don't believe */}
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h3 className="font-heading text-lg font-semibold mb-6 text-muted-foreground">
+                {t('different.dontTitle')}
+              </h3>
+              <div className="space-y-4">
+                {dontBelieve.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="text-destructive font-medium mt-0.5">✗</span>
+                    <p className="text-muted-foreground">{item}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Right: What we believe */}
+            <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
+              <h3 className="font-heading text-lg font-semibold mb-6 text-foreground">
+                {t('different.believeTitle')}
+              </h3>
+              <div className="space-y-4">
+                {believe.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="text-accent font-medium mt-0.5">✓</span>
+                    <p className="text-foreground">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* How it works */}
-          <div className="bg-card border border-border rounded-lg p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-                <Check className="w-4 h-4 text-accent" />
-              </div>
-              <p className="font-medium text-foreground">{t('different.how')}</p>
-            </div>
-            <p className="text-muted-foreground ml-11">
-              {t('different.execute')}
-            </p>
-          </div>
+          {/* Bottom statement */}
+          <p className="text-center text-muted-foreground mt-8 max-w-2xl mx-auto">
+            {t('different.statement')}
+          </p>
         </div>
       </div>
     </section>
