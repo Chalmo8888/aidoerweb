@@ -1,9 +1,16 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   const { t } = useLanguage();
+
+  const scrollToWaitlist = () => {
+    const element = document.getElementById('waitlist');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
@@ -19,14 +26,8 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Tagline */}
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8 animate-fade-up">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">{t('hero.tagline')}</span>
-          </div>
-
           {/* Main headline */}
-          <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-up">
             {t('hero.title.1')}{' '}
             <span className="text-gradient glow-text">{t('hero.title.2')}</span>
             <br />
@@ -34,23 +35,23 @@ const HeroSection = () => {
           </h1>
 
           {/* Description */}
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             {t('hero.description')}
           </p>
 
           {/* CTA */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <Button variant="hero" size="xl" className="group">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <Button variant="hero" size="xl" className="group" onClick={scrollToWaitlist}>
               {t('hero.cta')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-          <p className="text-sm text-muted-foreground mt-4 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          <p className="text-sm text-muted-foreground mt-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
             {t('hero.cta.sub')}
           </p>
 
           {/* Browser mockup */}
-          <div className="mt-16 relative animate-fade-up" style={{ animationDelay: '0.5s' }}>
+          <div className="mt-16 relative animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <div className="glass rounded-2xl p-1 gradient-border">
               <div className="bg-card rounded-xl overflow-hidden">
                 <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
@@ -71,12 +72,8 @@ const HeroSection = () => {
                       <span className="font-heading font-bold text-2xl text-primary-foreground">AI</span>
                     </div>
                     <p className="text-muted-foreground">
-                      {t('different.describe')}
+                      {t('hero.mockup.ready')}
                     </p>
-                    <div className="flex items-center justify-center gap-2 text-primary">
-                      <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                      <span className="text-sm font-medium">Processing...</span>
-                    </div>
                   </div>
                 </div>
               </div>
