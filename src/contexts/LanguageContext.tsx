@@ -22,7 +22,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.description': 'AI Doer is a local AI agent that uses your own browser to get real work done. No scripts. No manual setup. Just tell it what to do.',
     'hero.cta': 'Join the Waitlist',
     'hero.cta.sub': 'Free during beta · No spam',
-    'hero.mockup.ready': 'Ready to execute your tasks',
+    'hero.learnMore': 'Learn more',
     
     // Problem
     'problem.title': 'What problem are we solving?',
@@ -152,7 +152,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.description': 'AI Doer 是一个本地 AI 代理，使用你自己的浏览器完成实际工作。无需脚本，无需手动设置。只需告诉它要做什么。',
     'hero.cta': '加入等待列表',
     'hero.cta.sub': '测试期免费 · 无垃圾邮件',
-    'hero.mockup.ready': '准备执行你的任务',
+    'hero.learnMore': '了解更多',
     
     // Problem
     'problem.title': '我们在解决什么问题？',

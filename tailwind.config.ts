@@ -9,13 +9,13 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1200px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ['Source Sans 3', 'sans-serif'],
-        heading: ['Outfit', 'sans-serif'],
+        sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+        heading: ['Inter', 'Noto Sans SC', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

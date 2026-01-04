@@ -37,41 +37,38 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section id="features" className="py-24 relative">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/50 to-transparent" />
-
-      <div className="container mx-auto px-6 relative">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold">
+    <section id="features" className="py-24 border-t border-border">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold">
             {t('features.title')}
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="glass rounded-2xl p-8 gradient-border group hover:bg-secondary/30 transition-all duration-300"
+              className="bg-card border border-border rounded-lg p-6 hover-lift"
             >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <feature.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-xl font-bold mb-1">{feature.title}</h3>
+                  <h3 className="font-heading text-lg font-semibold mb-1">{feature.title}</h3>
                   {feature.subtitle && (
-                    <span className="text-sm text-primary font-medium">{feature.subtitle}</span>
+                    <span className="text-sm text-primary">{feature.subtitle}</span>
                   )}
                 </div>
               </div>
 
-              <p className="text-muted-foreground mb-6">{feature.desc}</p>
+              <p className="text-muted-foreground mb-4 text-sm">{feature.desc}</p>
 
-              <ul className="space-y-3 mb-6">
+              <ul className="space-y-2 mb-4">
                 {feature.items.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <li key={i} className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-accent flex-shrink-0" />
                     <span className="text-sm text-foreground">{item}</span>
                   </li>
                 ))}
