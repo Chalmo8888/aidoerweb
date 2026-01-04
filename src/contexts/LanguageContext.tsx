@@ -106,7 +106,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Extended
     'extended.title': 'Extended capabilities',
-    'extended.subtitle': 'Optional, but powerful',
+    'extended.subtitle': '',
     'extended.engine': 'Built on top of AI Doer\'s execution engine',
     
     'ext1.title': 'AI website creation',
@@ -255,7 +255,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Extended
     'extended.title': '扩展能力',
-    'extended.subtitle': '可选，但强大',
+    'extended.subtitle': '',
     'extended.engine': '基于 AI Doer 的执行引擎扩展而来',
     
     'ext1.title': 'AI 网站创建',
