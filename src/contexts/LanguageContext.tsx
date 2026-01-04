@@ -13,6 +13,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Navigation
     'nav.features': 'Features',
     'nav.about': 'About',
+    'nav.download': 'Download',
     'nav.waitlist': 'Join Waitlist',
     
     // Hero - Optimized for conversion
@@ -161,6 +162,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Navigation
     'nav.features': '功能特点',
     'nav.about': '关于我们',
+    'nav.download': '下载',
     'nav.waitlist': '申请内测',
     
     // Hero - Optimized for conversion

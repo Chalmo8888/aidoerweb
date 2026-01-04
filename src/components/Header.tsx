@@ -30,6 +30,9 @@ const Header = () => {
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               {t('nav.about')}
             </a>
+            <a href="#download" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+              {t('nav.download')}
+            </a>
           </div>
 
           <div className="flex items-center gap-3">
