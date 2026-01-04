@@ -25,26 +25,31 @@ const ExtendedSection = () => {
   return (
     <section className="py-24 relative">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
             {t('extended.title')}
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg text-muted-foreground">
             {t('extended.subtitle')}
           </p>
         </div>
+
+        {/* Engine badge */}
+        <p className="text-center text-sm text-muted-foreground mb-12">
+          {t('extended.engine')}
+        </p>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {capabilities.map((cap, index) => (
             <div
               key={index}
-              className="glass rounded-2xl p-8 text-center group hover:bg-secondary/30 transition-all duration-300 gradient-border"
+              className="bg-card border border-border rounded-lg p-6 text-center hover:border-primary/30 transition-colors"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-                <cap.icon className="w-8 h-8 text-primary-foreground" />
+              <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-primary/10 flex items-center justify-center">
+                <cap.icon className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-heading text-xl font-bold mb-4">{cap.title}</h3>
-              <p className="text-muted-foreground">{cap.desc}</p>
+              <h3 className="font-heading text-lg font-semibold mb-3">{cap.title}</h3>
+              <p className="text-muted-foreground text-sm">{cap.desc}</p>
             </div>
           ))}
         </div>

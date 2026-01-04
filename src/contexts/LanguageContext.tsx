@@ -15,14 +15,26 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'About',
     'nav.waitlist': 'Join Waitlist',
     
-    // Hero
-    'hero.title.1': 'Let AI handle the',
-    'hero.title.2': 'repetitive work',
-    'hero.title.3': 'in your browser',
-    'hero.description': 'AI Doer is a local AI agent that uses your own browser to get real work done. No scripts. No manual setup. Just tell it what to do.',
+    // Hero - Optimized for conversion
+    'hero.title.1': 'Delegate browser work to AI.',
+    'hero.title.2': '',
+    'hero.title.3': 'Keep your focus on what matters.',
+    'hero.description': 'Describe the task once. AI Doer executes it in your local browser. No scripts. No setup. Runs locally.',
     'hero.cta': 'Join the Waitlist',
     'hero.cta.sub': 'Free during beta · No spam',
     'hero.learnMore': 'Learn more',
+    
+    // Hero Flow Diagram
+    'hero.flow.step1.label': 'Your instruction',
+    'hero.flow.step1.text': '"Post this update to LinkedIn"',
+    'hero.flow.step2.label': 'AI Doer',
+    'hero.flow.step2.text': 'Understands → Plans → Executes',
+    'hero.flow.step3.label': 'Browser execution',
+    'hero.flow.action1': 'Opens',
+    'hero.flow.action2': 'Clicks',
+    'hero.flow.action3': 'Fills',
+    'hero.flow.action4': 'Done',
+    'hero.flow.status': 'AI Doer executing step 3/4',
     
     // Problem
     'problem.title': 'What problem are we solving?',
@@ -37,14 +49,18 @@ const translations: Record<Language, Record<string, string>> = {
     'problem.issue3': "They don't work well across real-world apps",
     'problem.solution': 'AI Doer exists to take over high-frequency, standard tasks — reliably.',
     
-    // Different
+    // Different - Belief Statement Style
     'different.title': 'This is not another automation tool',
     'different.subtitle': 'AI Doer is different by design.',
-    'different.no1': 'No rigid workflows',
-    'different.no2': 'No fragile scripts',
-    'different.no3': 'No cloud browser pretending to be your computer',
-    'different.how': 'AI Doer runs locally and uses your browser like a human assistant would.',
-    'different.execute': 'AI Doer opens the browser, understands the UI, and executes the steps.',
+    'different.dontTitle': 'What we don\'t believe in',
+    'different.dont1': 'Scripts that break when sites update',
+    'different.dont2': 'Rigid flows that need constant maintenance',
+    'different.dont3': 'Cloud browsers that feel fake and unreliable',
+    'different.believeTitle': 'What we believe',
+    'different.believe1': 'Real browsers, real environments',
+    'different.believe2': 'Adaptive execution that handles changes',
+    'different.believe3': 'Local-first for accuracy and privacy',
+    'different.statement': 'AI Doer runs locally and uses your browser like a human assistant would.',
     
     // For Who
     'forwho.title': 'Who is AI Doer for?',
@@ -91,6 +107,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Extended
     'extended.title': 'Extended capabilities',
     'extended.subtitle': 'Optional, but powerful',
+    'extended.engine': 'Built on top of AI Doer\'s execution engine',
     
     'ext1.title': 'AI website creation',
     'ext1.desc': 'Upload a PDF, PPT, or URL — AI Doer turns it into a clean, SEO-optimized website with built-in AI customer support.',
@@ -120,9 +137,10 @@ const translations: Record<Language, Record<string, string>> = {
     'download.pcNote': 'Visit this page on PC to download Windows or Mac version',
     'download.mobileNote': 'Visit this page on mobile to get the Android app',
     
-    // CTA
+    // CTA - With Urgency
     'cta.title': 'Early access',
     'cta.desc': 'AI Doer is currently in private beta.',
+    'cta.urgency': 'Limited early access — Be one of the first 100 users',
     'cta.benefits': 'Join the waitlist to:',
     'cta.benefit1': 'Get early access',
     'cta.benefit2': 'Shape product direction',
@@ -143,16 +161,28 @@ const translations: Record<Language, Record<string, string>> = {
     // Navigation
     'nav.features': '功能特点',
     'nav.about': '关于我们',
-    'nav.waitlist': '加入等待列表',
+    'nav.waitlist': '申请内测',
     
-    // Hero
-    'hero.title.1': '让 AI 处理',
-    'hero.title.2': '重复性工作',
-    'hero.title.3': '在你的浏览器中',
-    'hero.description': 'AI Doer 是一个本地 AI 代理，使用你自己的浏览器完成实际工作。无需脚本，无需手动设置。只需告诉它要做什么。',
-    'hero.cta': '加入等待列表',
+    // Hero - Optimized for conversion
+    'hero.title.1': '把浏览器工作交给 AI。',
+    'hero.title.2': '',
+    'hero.title.3': '专注于真正重要的事。',
+    'hero.description': '描述一次任务。AI Doer 在你的本地浏览器中执行。无需脚本，无需设置，本地运行。',
+    'hero.cta': '申请内测',
     'hero.cta.sub': '测试期免费 · 无垃圾邮件',
     'hero.learnMore': '了解更多',
+    
+    // Hero Flow Diagram
+    'hero.flow.step1.label': '你的指令',
+    'hero.flow.step1.text': '"把这条更新发到 LinkedIn"',
+    'hero.flow.step2.label': 'AI Doer',
+    'hero.flow.step2.text': '理解 → 规划 → 执行',
+    'hero.flow.step3.label': '浏览器执行',
+    'hero.flow.action1': '打开',
+    'hero.flow.action2': '点击',
+    'hero.flow.action3': '填写',
+    'hero.flow.action4': '完成',
+    'hero.flow.status': 'AI Doer 正在执行步骤 3/4',
     
     // Problem
     'problem.title': '我们在解决什么问题？',
@@ -167,14 +197,18 @@ const translations: Record<Language, Record<string, string>> = {
     'problem.issue3': '在实际应用中效果不佳',
     'problem.solution': 'AI Doer 的存在就是为了可靠地接管高频标准任务。',
     
-    // Different
+    // Different - Belief Statement Style
     'different.title': '这不是另一个自动化工具',
     'different.subtitle': 'AI Doer 在设计上就不同。',
-    'different.no1': '没有僵化的工作流程',
-    'different.no2': '没有脆弱的脚本',
-    'different.no3': '没有假装成你电脑的云端浏览器',
-    'different.how': 'AI Doer 在本地运行，像人类助手一样使用你的浏览器。',
-    'different.execute': 'AI Doer 打开浏览器，理解界面，执行步骤。',
+    'different.dontTitle': '我们不相信',
+    'different.dont1': '网站更新就会崩溃的脚本',
+    'different.dont2': '需要不断维护的僵化流程',
+    'different.dont3': '虚假且不可靠的云端浏览器',
+    'different.believeTitle': '我们相信',
+    'different.believe1': '真实的浏览器，真实的环境',
+    'different.believe2': '能适应变化的自适应执行',
+    'different.believe3': '本地优先，确保准确性和隐私',
+    'different.statement': 'AI Doer 在本地运行，像人类助手一样使用你的浏览器。',
     
     // For Who
     'forwho.title': 'AI Doer 适合谁？',
@@ -221,6 +255,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Extended
     'extended.title': '扩展能力',
     'extended.subtitle': '可选，但强大',
+    'extended.engine': '基于 AI Doer 的执行引擎扩展而来',
     
     'ext1.title': 'AI 网站创建',
     'ext1.desc': '上传 PDF、PPT 或 URL——AI Doer 将其转化为干净、SEO 优化的网站，内置 AI 客服。',
@@ -250,14 +285,15 @@ const translations: Record<Language, Record<string, string>> = {
     'download.pcNote': '在电脑上访问此页面下载 Windows 或 Mac 版本',
     'download.mobileNote': '在手机上访问此页面获取 Android 应用',
     
-    // CTA
+    // CTA - With Urgency
     'cta.title': '抢先体验',
     'cta.desc': 'AI Doer 目前处于私密测试阶段。',
-    'cta.benefits': '加入等待列表以：',
+    'cta.urgency': '限量早期名额 — 成为首批 100 位用户之一',
+    'cta.benefits': '申请内测以：',
     'cta.benefit1': '获得早期访问',
     'cta.benefit2': '参与产品方向决策',
     'cta.benefit3': '成为首批将真实工作委派给 AI 的用户',
-    'cta.button': '加入等待列表',
+    'cta.button': '申请内测',
     'cta.note': '测试期免费 · 早期用户参与路线图制定 · 无垃圾邮件',
     
     // Footer

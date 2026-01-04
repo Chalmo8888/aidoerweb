@@ -29,9 +29,16 @@ const CTASection = () => {
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
             {t('cta.title')}
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-muted-foreground mb-6">
             {t('cta.desc')}
           </p>
+
+          {/* Urgency badge */}
+          <div className="inline-block px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-8">
+            <p className="text-sm font-medium text-accent">
+              {t('cta.urgency')}
+            </p>
+          </div>
 
           <p className="font-medium mb-4">{t('cta.benefits')}</p>
 
