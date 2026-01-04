@@ -16,6 +16,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.waitlist': 'Join Waitlist',
     
     // Hero
+    'hero.tagline': 'Your AI Doer — Stay focused on what matters',
     'hero.title.1': 'Let AI handle the',
     'hero.title.2': 'repetitive work',
     'hero.title.3': 'in your browser',
@@ -120,17 +121,6 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.button': 'Join the Waitlist',
     'cta.note': 'Free during beta · Early users help shape the roadmap · No spam',
     
-    // Download
-    'download.badge': 'Download',
-    'download.title': 'Get AI Doer',
-    'download.desc': 'Download AI Doer and start automating your browser tasks today.',
-    'download.desktop': 'Desktop',
-    'download.windows': 'Windows',
-    'download.mac': 'macOS',
-    'download.mobile': 'Mobile',
-    'download.android': 'Android',
-    'download.scan': 'Scan QR code to download',
-    
     // Footer
     'footer.about': 'About the team',
     'footer.desc': 'Built by a small team focused on real-world browser automation. We believe AI should execute — not distract.',
@@ -147,6 +137,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.waitlist': '加入等待列表',
     
     // Hero
+    'hero.tagline': '你的 AI 执行者 — 专注于真正重要的事',
     'hero.title.1': '让 AI 处理',
     'hero.title.2': '重复性工作',
     'hero.title.3': '在你的浏览器中',
@@ -250,17 +241,6 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.benefit3': '成为首批将真实工作委派给 AI 的用户',
     'cta.button': '加入等待列表',
     'cta.note': '测试期免费 · 早期用户参与路线图制定 · 无垃圾邮件',
-    
-    // Download
-    'download.badge': '下载',
-    'download.title': '获取 AI Doer',
-    'download.desc': '下载 AI Doer，立即开始自动化您的浏览器任务。',
-    'download.desktop': '桌面端',
-    'download.windows': 'Windows',
-    'download.mac': 'macOS',
-    'download.mobile': '移动端',
-    'download.android': 'Android',
-    'download.scan': '扫描二维码下载',
     
     // Footer
     'footer.about': '关于团队',

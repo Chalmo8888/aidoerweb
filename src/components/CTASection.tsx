@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 
 const CTASection = () => {
@@ -33,6 +33,11 @@ const CTASection = () => {
 
       <div className="container mx-auto px-6 relative">
         <div className="max-w-2xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-8">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm text-muted-foreground">Private Beta</span>
+          </div>
+
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             {t('cta.title')}
           </h2>
@@ -56,7 +61,6 @@ const CTASection = () => {
           {/* Email form */}
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-6">
             <input
-              id="waitlist-email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
