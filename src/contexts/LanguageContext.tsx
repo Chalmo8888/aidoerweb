@@ -165,13 +165,13 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.download': '下载',
     'nav.waitlist': '申请内测',
     
-    // Hero - Optimized for conversion
-    'hero.title.1': '把浏览器工作交给 AI。',
-    'hero.title.2': '专注于真正重要的事。',
-    'hero.description': '描述一次任务。AI Doer 在你的本地浏览器中执行。无需脚本，无需设置，本地运行。',
+    // Hero - Optimized for conversion (判断式，非功能说明)
+    'hero.title.1': '把浏览器里的执行工作，交给 AI。',
+    'hero.title.2': '',
+    'hero.description': '你只负责描述任务，AI Doer 在你的本地浏览器中完成执行。',
     'hero.cta': '申请内测',
-    'hero.cta.sub': '测试期免费 · 无垃圾邮件',
-    'hero.learnMore': '了解更多',
+    'hero.cta.sub': '不写脚本，不搭流程。像委派给一个真正会用浏览器的助手。',
+    'hero.learnMore': '了解它如何工作',
     
     // Hero Flow Diagram
     'hero.flow.step1.label': '你的指令',
@@ -185,9 +185,9 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.flow.action4': '完成',
     'hero.flow.status': 'AI Doer 正在执行步骤 3/4',
     
-    // Problem
+    // Problem (判断式语气)
     'problem.title': '我们在解决什么问题？',
-    'problem.subtitle': '知识工作者花太多时间在执行，而不是思考。',
+    'problem.subtitle': '很多专业人士，本该花时间思考，却被执行细节拖住。',
     'problem.item1': '每天重复相同的浏览器操作',
     'problem.item2': '像机器人一样遵循标准操作流程',
     'problem.item3': '手动在多个平台发布内容',
@@ -196,25 +196,25 @@ const translations: Record<Language, Record<string, string>> = {
     'problem.issue1': '设置困难',
     'problem.issue2': '容易出错',
     'problem.issue3': '在实际应用中效果不佳',
-    'problem.solution': 'AI Doer 的存在就是为了可靠地接管高频标准任务。',
+    'problem.solution': 'AI Doer 接管的是那些你早就知道怎么做、却不得不反复去做的事。',
     
-    // Different - Belief Statement Style
+    // Different - Belief Statement Style (判断式：不依赖/选择)
     'different.title': '这不是另一个自动化工具',
     'different.subtitle': 'AI Doer 在设计上就不同。',
-    'different.dontTitle': '我们不相信',
-    'different.dont1': '网站更新就会崩溃的脚本',
+    'different.dontTitle': '我们不依赖',
+    'different.dont1': '一次网站更新就失效的脚本',
     'different.dont2': '需要不断维护的僵化流程',
     'different.dont3': '虚假且不可靠的云端浏览器',
-    'different.believeTitle': '我们相信',
+    'different.believeTitle': '我们选择',
     'different.believe1': '真实的浏览器，真实的环境',
     'different.believe2': '能适应变化的自适应执行',
     'different.believe3': '本地优先，确保准确性和隐私',
     'different.statement': 'AI Doer 在本地运行，像人类助手一样使用你的浏览器。',
     
-    // For Who
+    // For Who (加判断句，管理者视角)
     'forwho.title': 'AI Doer 适合谁？',
-    'forwho.subtitle': '为有抱负的专业人士打造',
-    'forwho.desc': 'AI Doer 专为这样的人设计：',
+    'forwho.subtitle': 'AI Doer 不适合所有人。',
+    'forwho.desc': '它更适合那些已经清楚"事情该怎么做"，但不想再亲自去做的人。',
     'forwho.item1': '处理重复但重要的浏览器任务',
     'forwho.item2': '知道工作应该如何完成（SOP）',
     'forwho.item3': '想要委派执行，而非决策',
@@ -267,9 +267,9 @@ const translations: Record<Language, Record<string, string>> = {
     'ext3.title': '一键内容分发',
     'ext3.desc': '上传一次，全平台发布。AI Doer 处理多平台发布的浏览器步骤。',
     
-    // Local
+    // Local (更自然的语气)
     'local.title': '为什么本地执行很重要',
-    'local.subtitle': '大多数 AI 代理在云端运行。AI Doer 在你的机器上运行。',
+    'local.subtitle': '很多 AI Agent 运行在云端。AI Doer 直接运行在你的设备上。',
     'local.item1': '更高准确性',
     'local.item2': '更好稳定性',
     'local.item3': '更低成本',
@@ -287,16 +287,16 @@ const translations: Record<Language, Record<string, string>> = {
     'download.scanToDownload': '扫码下载官方 Android 应用',
     'download.officialOnly': '仅用于下载官方应用 · 不收集个人信息',
     
-    // CTA - With Urgency
-    'cta.title': '抢先体验',
-    'cta.desc': 'AI Doer 目前处于私密测试阶段。',
-    'cta.urgency': '限量早期名额 — 成为首批 100 位用户之一',
-    'cta.benefits': '申请内测以：',
+    // CTA - With Urgency (更克制)
+    'cta.title': '内测访问',
+    'cta.desc': 'AI Doer 目前仅对少量用户开放。',
+    'cta.urgency': '',
+    'cta.benefits': '',
     'cta.benefit1': '获得早期访问',
     'cta.benefit2': '参与产品方向决策',
     'cta.benefit3': '成为首批将真实工作委派给 AI 的用户',
-    'cta.button': '申请内测',
-    'cta.note': '测试期免费 · 早期用户参与路线图制定 · 无垃圾邮件',
+    'cta.button': '申请内测资格',
+    'cta.note': '测试期免费 · 无垃圾邮件',
     
     // Footer
     'footer.about': '关于团队',
