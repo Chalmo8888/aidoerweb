@@ -46,39 +46,6 @@ const HeroSection = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-          <p className="text-sm text-muted-foreground mt-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            {t('hero.cta.sub')}
-          </p>
-
-          {/* Browser mockup */}
-          <div className="mt-16 relative animate-fade-up" style={{ animationDelay: '0.4s' }}>
-            <div className="glass rounded-2xl p-1 gradient-border">
-              <div className="bg-card rounded-xl overflow-hidden">
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-destructive/60" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-                    <div className="w-3 h-3 rounded-full bg-green-500/60" />
-                  </div>
-                  <div className="flex-1 mx-4">
-                    <div className="bg-muted rounded-md h-6 w-full max-w-md mx-auto flex items-center justify-center">
-                      <span className="text-xs text-muted-foreground">ai-doer.app</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-8 min-h-[300px] flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-primary flex items-center justify-center animate-float">
-                      <span className="font-heading font-bold text-2xl text-primary-foreground">AI</span>
-                    </div>
-                    <p className="text-muted-foreground">
-                      {t('hero.mockup.ready')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
