@@ -14,7 +14,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.features': 'Features',
     'nav.about': 'About',
     'nav.download': 'Download',
-    'nav.waitlist': 'Join Waitlist',
+    'nav.waitlist': 'Join the Waitlist',
     
     // Hero - Optimized for conversion
     'hero.title.1': 'Delegate browser work to AI.',
