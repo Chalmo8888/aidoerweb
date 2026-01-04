@@ -17,8 +17,8 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.waitlist': 'Join the Waitlist',
     
     // Hero - Optimized for conversion
-    'hero.title.1': 'Delegate browser work to AI.',
-    'hero.title.2': 'Keep your focus on what matters.',
+    'hero.title.1': 'Your AI Doer：',
+    'hero.title.2': 'Keep you focused on creativity',
     'hero.description': 'Describe the task once. AI Doer executes it in your local browser. No scripts. No setup. Runs locally.',
     'hero.cta': 'Join the Waitlist',
     'hero.cta.sub': 'Free during beta · No spam',
@@ -166,8 +166,8 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.waitlist': '申请内测',
     
     // Hero - Optimized for conversion (判断式，非功能说明)
-    'hero.title.1': '把浏览器里的执行工作，交给 AI。',
-    'hero.title.2': '专注真正重要的事。',
+    'hero.title.1': '你的 AI 执行者',
+    'hero.title.2': '让你专注于创造',
     'hero.description': '你只负责描述任务，AI Doer 在你的本地浏览器中完成执行。',
     'hero.cta': '申请内测',
     'hero.cta.sub': '不写脚本，不搭流程。像委派给一个真正会用浏览器的助手。',
