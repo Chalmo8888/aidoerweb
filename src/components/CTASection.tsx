@@ -33,24 +33,6 @@ const CTASection = () => {
             {t('cta.desc')}
           </p>
 
-          {/* Urgency badge */}
-          <div className="inline-block px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-8">
-            <p className="text-sm font-medium text-accent">
-              {t('cta.urgency')}
-            </p>
-          </div>
-
-          <p className="font-medium mb-4">{t('cta.benefits')}</p>
-
-          <div className="flex flex-col items-center gap-2 mb-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-accent" />
-                <span className="text-muted-foreground">{benefit}</span>
-              </div>
-            ))}
-          </div>
-
           {/* Email form */}
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
             <input
