@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import logo from '@/assets/logo.png';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -9,9 +10,7 @@ const Footer = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center">
-                <span className="font-heading font-bold text-lg text-primary-foreground">A</span>
-              </div>
+              <img src={logo} alt="AI Doer" className="w-10 h-10" />
               <span className="font-heading font-bold text-2xl">AI Doer</span>
             </div>
 
