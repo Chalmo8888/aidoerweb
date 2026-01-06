@@ -302,7 +302,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.about': '关于团队',
-    'footer.desc': '由一个专注于真实浏览器自动化的小团队构建。我们相信 AI 应该执行——而非分散注意力。',
+    'footer.desc': '由专注真实场景浏览器自动化的小团队匠心打造。我们坚信，AI 应聚焦执行本身，而非分散用户精力。',
     'footer.rights': '保留所有权利。',
     
     // Email
