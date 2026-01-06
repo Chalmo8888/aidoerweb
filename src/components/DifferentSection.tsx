@@ -40,7 +40,7 @@ const DifferentSection = () => {
           {/* Two Column Comparison */}
           <div className="grid md:grid-cols-2 gap-6 relative">
             {/* Animated Arrow indicator */}
-            <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+            <div className="hidden md:flex absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 z-20">
               <div className="w-14 h-14 rounded-full bg-gradient-primary flex items-center justify-center shadow-glow-lg animate-wiggle">
                 <ArrowRight className="w-6 h-6 text-primary-foreground" />
               </div>
