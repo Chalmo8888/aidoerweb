@@ -7,7 +7,6 @@ import ForWhoSection from '@/components/ForWhoSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import ExtendedSection from '@/components/ExtendedSection';
 import LocalSection from '@/components/LocalSection';
-import DownloadSection from '@/components/DownloadSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
@@ -24,7 +23,6 @@ const Index = () => {
           <FeaturesSection />
           <ExtendedSection />
           <LocalSection />
-          <DownloadSection />
           <CTASection />
         </main>
         <Footer />
