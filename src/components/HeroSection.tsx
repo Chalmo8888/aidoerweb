@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Monitor, Mouse } from 'lucide-react';
 import heroIllustration from '@/assets/hero-illustration.png';
 const HeroSection = () => {
   const {
@@ -82,31 +82,38 @@ const HeroSection = () => {
             }} />
             </div>
 
-            {/* Floating elements */}
-            <div className="absolute top-10 right-10 bg-background/90 backdrop-blur-md p-4 rounded-2xl float shadow-lg border border-primary/20" style={{
+            {/* CUA Style Floating Card - Screen Control */}
+            <div className="absolute top-10 right-10 bg-card/95 backdrop-blur-md p-3 rounded-xl float shadow-lg border border-border/50" style={{
             animationDelay: '1s'
           }}>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/70 rounded-xl flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-primary-foreground" />
+              <div className="flex items-center gap-2 mb-2">
+                <Monitor className="w-4 h-4 text-primary" />
+                <span className="text-xs font-medium text-foreground">Screen Control</span>
+              </div>
+              <div className="bg-muted/50 rounded-lg p-2 font-mono text-[10px] text-muted-foreground">
+                <div className="flex items-center gap-1">
+                  <span className="text-accent">→</span>
+                  <span>click(button, "Submit")</span>
                 </div>
-                <div className="text-left">
-                  <p className="text-xs text-muted-foreground">AI Status</p>
-                  <p className="text-sm font-semibold text-foreground">Ready</p>
+                <div className="flex items-center gap-1 opacity-60">
+                  <span className="text-primary">→</span>
+                  <span>type(input, "data...")</span>
                 </div>
               </div>
             </div>
             
-            <div className="absolute bottom-20 left-5 bg-background/90 backdrop-blur-md px-4 py-3 rounded-2xl float-delayed shadow-lg border border-accent/30">
-              <div className="flex items-center gap-3">
-                <div className="relative">
-                  <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center">
-                    <div className="w-2.5 h-2.5 bg-accent rounded-full animate-pulse" />
-                  </div>
+            {/* CUA Style Floating Card - Mouse Action */}
+            <div className="absolute bottom-20 left-5 bg-card/95 backdrop-blur-md px-3 py-2 rounded-xl float-delayed shadow-lg border border-border/50">
+              <div className="flex items-center gap-2">
+                <div className="w-7 h-7 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Mouse className="w-4 h-4 text-primary" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs font-medium text-foreground">Task Running</p>
-                  <p className="text-xs text-muted-foreground">3 automations active</p>
+                  <p className="text-[10px] text-muted-foreground">CUA Active</p>
+                  <div className="flex items-center gap-1">
+                    <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+                    <p className="text-xs font-medium text-foreground">Executing...</p>
+                  </div>
                 </div>
               </div>
             </div>
