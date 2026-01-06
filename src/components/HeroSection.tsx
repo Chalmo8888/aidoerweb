@@ -1,20 +1,20 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import heroIllustration from '@/assets/hero-illustration.png';
-
 const HeroSection = () => {
-  const { t } = useLanguage();
-  
+  const {
+    t
+  } = useLanguage();
   const scrollToWaitlist = () => {
     const element = document.getElementById('waitlist');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-gradient-hero-light">
+  return <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-gradient-hero-light">
       {/* Tech grid pattern overlay */}
       <div className="absolute inset-0 tech-grid opacity-60 pointer-events-none" />
       
@@ -26,55 +26,50 @@ const HeroSection = () => {
       </div>
 
       {/* Glow overlay */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'var(--gradient-glow)' }} />
+      <div className="absolute inset-0 pointer-events-none" style={{
+      background: 'var(--gradient-glow)'
+    }} />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left">
-            <h1 
-              className="font-heading text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight animate-fade-in" 
-              style={{ animationDelay: '0.1s' }}
-            >
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
               <span className="text-gradient">{t('hero.title.1')}</span>
               <br />
               <span className="text-foreground">{t('hero.title.2')}</span>
             </h1>
 
-            <p 
-              className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-fade-in tracking-readable"
-              style={{ animationDelay: '0.2s', letterSpacing: '0.03em', lineHeight: '1.6' }}
-            >
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-fade-in tracking-readable" style={{
+            animationDelay: '0.2s',
+            letterSpacing: '0.03em',
+            lineHeight: '1.6'
+          }}>
               {t('hero.description')}
             </p>
 
-            <div 
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-in" 
-              style={{ animationDelay: '0.3s' }}
-            >
-              <Button 
-                size="lg" 
-                className="group bg-gradient-primary hover:opacity-95 transition-all duration-300 shadow-glow-blue hover:shadow-glow-lg hover:-translate-y-0.5 px-8 h-14 text-base rounded-lg border border-primary-glow/20"
-                onClick={scrollToWaitlist}
-              >
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-in" style={{
+            animationDelay: '0.3s'
+          }}>
+              <Button size="lg" className="group bg-gradient-primary hover:opacity-95 transition-all duration-300 shadow-glow-blue hover:shadow-glow-lg hover:-translate-y-0.5 px-8 h-14 text-base rounded-lg border border-primary-glow/20" onClick={scrollToWaitlist}>
                 {t('hero.cta')}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
             
-            <p 
-              className="text-sm text-muted-foreground mt-6 animate-fade-in" 
-              style={{ animationDelay: '0.4s' }}
-            >
+            <p className="text-sm text-muted-foreground mt-6 animate-fade-in" style={{
+            animationDelay: '0.4s'
+          }}>
               {t('hero.cta.sub')}
             </p>
           </div>
 
           {/* Right illustration */}
-          <div 
-            className="relative flex items-center justify-center animate-fade-in" 
-            style={{ animationDelay: '0.3s' }}
-          >
+          <div className="relative flex items-center justify-center animate-fade-in" style={{
+          animationDelay: '0.3s'
+        }}>
             {/* Glow behind image */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-96 h-96 bg-primary/15 rounded-full blur-[100px] animate-pulse-glow" />
@@ -82,19 +77,15 @@ const HeroSection = () => {
             
             {/* Main illustration with float and glow effect */}
             <div className="relative animate-float-glow">
-              <img 
-                src={heroIllustration} 
-                alt="AI Automation Illustration" 
-                className="w-full max-w-lg mx-auto drop-shadow-2xl rounded-2xl"
-                style={{ filter: 'drop-shadow(0 0 30px hsl(217 100% 55% / 0.25))' }}
-              />
+              <img src={heroIllustration} alt="AI Automation Illustration" className="w-full max-w-lg mx-auto drop-shadow-2xl rounded-2xl" style={{
+              filter: 'drop-shadow(0 0 30px hsl(217 100% 55% / 0.25))'
+            }} />
             </div>
 
             {/* Floating elements */}
-            <div 
-              className="absolute top-10 right-10 glass-strong p-3 rounded-xl float shadow-card" 
-              style={{ animationDelay: '1s' }}
-            >
+            <div className="absolute top-10 right-10 glass-strong p-3 rounded-xl float shadow-card" style={{
+            animationDelay: '1s'
+          }}>
               <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow-blue">
                 <Sparkles className="w-5 h-5 text-primary-foreground" />
               </div>
@@ -107,14 +98,10 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="absolute top-1/2 -left-5 glass-strong p-2 rounded-lg float" style={{ animationDelay: '0.5s' }}>
-              <Zap className="w-4 h-4 text-secondary-orange" />
-            </div>
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
