@@ -17,7 +17,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.waitlist': 'Join the Waitlist',
     
     // Hero - Optimized for conversion
-    'hero.title.1': 'Your AI Doer：',
+    'hero.title.1': 'Your AI Doer',
     'hero.title.2': 'Keep you focused on creativity',
     'hero.description': 'Describe the task once. AI Doer executes it in your local browser. No scripts. No setup. Runs locally.',
     'hero.cta': 'Join the Waitlist',
