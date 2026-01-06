@@ -83,11 +83,25 @@ const HeroSection = () => {
             }} />
             </div>
 
-            {/* CUA Style Floating Card - AI Control Image */}
-            <div className="absolute top-10 right-10 bg-card/95 backdrop-blur-md p-2 rounded-xl float shadow-lg border border-border/50" style={{
-            animationDelay: '1s'
-          }}>
-              <img src={cuaIcon} alt="AI Computer Use" className="w-16 h-16 rounded-lg" />
+            {/* CUA Style Floating Card - AI Control Image with Tech Style */}
+            <div className="absolute top-10 right-10 float group" style={{ animationDelay: '1s' }}>
+              <div className="relative p-3 rounded-xl bg-gradient-to-br from-primary/20 via-card/95 to-secondary-blue/20 backdrop-blur-md border border-primary/30 shadow-glow-blue overflow-hidden">
+                {/* Scan line effect */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent animate-pulse opacity-50" />
+                {/* Corner accents */}
+                <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-primary/60 rounded-tl-lg" />
+                <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-primary/60 rounded-tr-lg" />
+                <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-primary/60 rounded-bl-lg" />
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-primary/60 rounded-br-lg" />
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="flex items-center gap-1.5 mb-1.5">
+                    <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+                    <span className="text-[9px] font-mono text-primary/80 uppercase tracking-wider">AI Control</span>
+                  </div>
+                  <img src={cuaIcon} alt="AI Computer Use" className="w-14 h-14 rounded-lg ring-1 ring-primary/20" />
+                </div>
+              </div>
             </div>
             
             {/* CUA Style Floating Card - Mouse Action */}
