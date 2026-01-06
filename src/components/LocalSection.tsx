@@ -25,9 +25,9 @@ const LocalSection = () => {
             <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-primary mb-8 shadow-glow-lg float">
               <Monitor className="w-12 h-12 text-primary-foreground" />
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 title-decorated">
-              <span className="text-gradient">{t('local.title')}</span>
-            </h2>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+            <span className="text-gradient">{t('local.title')}</span>
+          </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('local.subtitle')}
             </p>

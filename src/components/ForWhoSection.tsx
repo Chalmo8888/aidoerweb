@@ -17,9 +17,9 @@ const ForWhoSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
             <div className="text-center md:text-left mb-4 md:mb-0">
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 title-decorated">
-                {t('forwho.title')}
-              </h2>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+              {t('forwho.title')}
+            </h2>
             </div>
             <div className="text-center md:text-right">
               <span className="text-xs uppercase tracking-widest text-secondary-blue font-semibold">

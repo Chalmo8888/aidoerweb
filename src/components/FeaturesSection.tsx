@@ -50,9 +50,9 @@ const FeaturesSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold title-decorated">
-            <span className="text-gradient">{t('features.title')}</span>
-          </h2>
+        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold">
+          <span className="text-gradient">{t('features.title')}</span>
+        </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
