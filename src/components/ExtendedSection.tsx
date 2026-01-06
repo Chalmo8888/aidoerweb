@@ -38,9 +38,9 @@ const ExtendedSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-6">
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 title-decorated">
-            <span className="text-gradient">{t('extended.title')}</span>
-          </h2>
+        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+          <span className="text-gradient">{t('extended.title')}</span>
+        </h2>
         </div>
 
         {/* Engine badge */}

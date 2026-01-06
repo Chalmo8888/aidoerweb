@@ -29,9 +29,9 @@ const DifferentSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 title-decorated">
-              <span className="text-gradient">{t('different.title')}</span>
-            </h2>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+            <span className="text-gradient">{t('different.title')}</span>
+          </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t('different.subtitle')}
             </p>
