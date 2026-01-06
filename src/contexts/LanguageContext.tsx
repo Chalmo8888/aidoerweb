@@ -157,6 +157,8 @@ const translations: Record<Language, Record<string, string>> = {
     // Email
     'email.placeholder': 'Enter your email',
     'email.success': 'Thanks! We\'ll be in touch.',
+    'email.error.empty': 'Please enter your email address',
+    'email.error.invalid': 'Please enter a valid email address',
   },
   zh: {
     // Navigation
@@ -306,6 +308,8 @@ const translations: Record<Language, Record<string, string>> = {
     // Email
     'email.placeholder': '输入你的邮箱',
     'email.success': '谢谢！我们会联系你。',
+    'email.error.empty': '请输入邮箱地址',
+    'email.error.invalid': '请输入有效的邮箱地址',
   },
 };
 
