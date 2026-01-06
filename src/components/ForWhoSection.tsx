@@ -1,18 +1,11 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Check, Users, Star } from 'lucide-react';
-
 const ForWhoSection = () => {
-  const { t } = useLanguage();
-
-  const items = [
-    t('forwho.item1'),
-    t('forwho.item2'),
-    t('forwho.item3'),
-    t('forwho.item4'),
-  ];
-
-  return (
-    <section className="py-24 relative overflow-hidden">
+  const {
+    t
+  } = useLanguage();
+  const items = [t('forwho.item1'), t('forwho.item2'), t('forwho.item3'), t('forwho.item4')];
+  return <section className="py-24 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px]" />
@@ -22,10 +15,7 @@ const ForWhoSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6">
-              <Star className="w-4 h-4 text-yellow-500" />
-              <span className="text-sm font-medium text-muted-foreground">Perfect For</span>
-            </div>
+            
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
               {t('forwho.title')}
             </h2>
@@ -48,17 +38,12 @@ const ForWhoSection = () => {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-10">
-                {items.map((item, index) => (
-                  <div
-                    key={index}
-                    className="group flex items-center gap-4 p-5 rounded-2xl bg-card/50 hover:bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover-lift"
-                  >
+                {items.map((item, index) => <div key={index} className="group flex items-center gap-4 p-5 rounded-2xl bg-card/50 hover:bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover-lift">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                       <Check className="w-5 h-5 text-primary" />
                     </div>
                     <p className="text-foreground font-medium">{item}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               <div className="pt-8 border-t border-border/50 text-center">
@@ -72,8 +57,6 @@ const ForWhoSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ForWhoSection;
