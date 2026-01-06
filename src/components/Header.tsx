@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Globe } from 'lucide-react';
+import logo from '@/assets/logo.png';
 const Header = () => {
   const {
     language,
@@ -19,9 +20,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="font-heading font-bold text-primary-foreground text-sm">AI</span>
-            </div>
+            <img src={logo} alt="AI Doer" className="w-8 h-8" />
             <span className="font-heading font-semibold text-lg">AI Doer</span>
           </div>
 
