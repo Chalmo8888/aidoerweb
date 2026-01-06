@@ -1,7 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Monitor, Mouse } from 'lucide-react';
+import { ArrowRight, Mouse } from 'lucide-react';
 import heroIllustration from '@/assets/hero-illustration.png';
+import cuaIcon from '@/assets/cua-icon.png';
 const HeroSection = () => {
   const {
     t
@@ -82,24 +83,11 @@ const HeroSection = () => {
             }} />
             </div>
 
-            {/* CUA Style Floating Card - Screen Control */}
-            <div className="absolute top-10 right-10 bg-card/95 backdrop-blur-md p-3 rounded-xl float shadow-lg border border-border/50" style={{
+            {/* CUA Style Floating Card - AI Control Image */}
+            <div className="absolute top-10 right-10 bg-card/95 backdrop-blur-md p-2 rounded-xl float shadow-lg border border-border/50" style={{
             animationDelay: '1s'
           }}>
-              <div className="flex items-center gap-2 mb-2">
-                <Monitor className="w-4 h-4 text-primary" />
-                <span className="text-xs font-medium text-foreground">Screen Control</span>
-              </div>
-              <div className="bg-muted/50 rounded-lg p-2 font-mono text-[10px] text-muted-foreground">
-                <div className="flex items-center gap-1">
-                  <span className="text-accent">→</span>
-                  <span>click(button, "Submit")</span>
-                </div>
-                <div className="flex items-center gap-1 opacity-60">
-                  <span className="text-primary">→</span>
-                  <span>type(input, "data...")</span>
-                </div>
-              </div>
+              <img src={cuaIcon} alt="AI Computer Use" className="w-16 h-16 rounded-lg" />
             </div>
             
             {/* CUA Style Floating Card - Mouse Action */}
