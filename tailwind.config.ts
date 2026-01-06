@@ -17,6 +17,20 @@ export default {
         sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
         heading: ['Inter', 'Noto Sans SC', 'sans-serif'],
       },
+      fontSize: {
+        'hero': ['3.5rem', { lineHeight: '1.1', fontWeight: '700' }],
+        'hero-lg': ['4rem', { lineHeight: '1.1', fontWeight: '700' }],
+        'section': ['2rem', { lineHeight: '1.2', fontWeight: '600' }],
+        'section-lg': ['2.5rem', { lineHeight: '1.2', fontWeight: '600' }],
+      },
+      letterSpacing: {
+        'readable': '0.02em',
+        'wide': '0.05em',
+      },
+      lineHeight: {
+        'relaxed': '1.6',
+        'loose': '1.8',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -31,6 +45,9 @@ export default {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          blue: "hsl(var(--secondary-blue))",
+          purple: "hsl(var(--secondary-purple))",
+          orange: "hsl(var(--secondary-orange))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -65,6 +82,10 @@ export default {
         'glow': '0 0 40px hsl(var(--primary) / 0.15)',
         'glow-lg': '0 0 60px hsl(var(--primary) / 0.25)',
         'glow-accent': '0 0 40px hsl(var(--accent) / 0.2)',
+        'glow-blue': '0 0 30px hsl(217 100% 55% / 0.3)',
+        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+        'card': '0 4px 20px -4px rgba(0, 0, 0, 0.1)',
+        'card-hover': '0 10px 40px -10px hsl(var(--primary) / 0.2)',
       },
       keyframes: {
         "accordion-down": {
@@ -97,11 +118,26 @@ export default {
         },
         "pulse-glow": {
           "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.2)" },
-          "50%": { boxShadow: "0 0 40px hsl(var(--primary) / 0.4)" },
+          "50%": { boxShadow: "0 0 50px hsl(var(--primary) / 0.4)" },
         },
         "rotate-slow": {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
+        },
+        "wiggle": {
+          "0%, 100%": { transform: "translateX(-50%) translateY(-50%)" },
+          "25%": { transform: "translateX(-50%) translateY(-50%) rotate(-5deg)" },
+          "75%": { transform: "translateX(-50%) translateY(-50%) rotate(5deg)" },
+        },
+        "float-glow": {
+          "0%, 100%": { 
+            transform: "translateY(0) scale(1.05)",
+            boxShadow: "0 0 30px hsl(217 100% 55% / 0.3)"
+          },
+          "50%": { 
+            transform: "translateY(-10px) scale(1.08)",
+            boxShadow: "0 0 50px hsl(217 100% 55% / 0.5)"
+          },
         },
       },
       animation: {
@@ -115,6 +151,8 @@ export default {
         "float-delayed": "float 6s ease-in-out infinite 2s",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "rotate-slow": "rotate-slow 20s linear infinite",
+        "wiggle": "wiggle 2s ease-in-out infinite",
+        "float-glow": "float-glow 4s ease-in-out infinite",
       },
     },
   },
