@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Mail, AlertCircle } from 'lucide-react';
+import { ArrowRight, Mail, AlertCircle, Sparkles, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 const CTASection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
 
@@ -28,7 +28,35 @@ const CTASection = () => {
       return;
     }
 
-    toast.success(t('email.success'));
+    // Custom styled toast with AI theme
+    toast.custom((toastId) => (
+      <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-ai/30 shadow-glow-ai backdrop-blur-sm min-w-[320px]">
+        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center">
+          <CheckCircle2 className="w-5 h-5 text-white" />
+        </div>
+        <div className="flex-1">
+          <div className="flex items-center gap-2 mb-1">
+            <Sparkles className="w-4 h-4 text-ai" />
+            <span className="font-semibold text-white">
+              {language === 'zh' ? '申请成功' : 'You\'re on the list!'}
+            </span>
+          </div>
+          <p className="text-sm text-slate-300">
+            {language === 'zh' 
+              ? 'AI Doer 会在内测开放时通知你' 
+              : 'We\'ll notify you when AI Doer is ready for you'}
+          </p>
+          <div className="flex items-center gap-2 mt-2 text-xs text-ai/80">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-ai animate-pulse" />
+            {language === 'zh' ? '早期用户优先访问' : 'Early access priority'}
+          </div>
+        </div>
+      </div>
+    ), {
+      duration: 5000,
+      position: 'top-center',
+    });
+
     setEmail('');
   };
 
