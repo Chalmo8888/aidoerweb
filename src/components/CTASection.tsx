@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Mail, AlertCircle, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Mail, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 const CTASection = () => {
@@ -28,32 +28,23 @@ const CTASection = () => {
       return;
     }
 
-    // Custom styled toast with AI theme
-    toast.custom((toastId) => (
-      <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-ai/30 shadow-glow-ai backdrop-blur-sm min-w-[320px]">
-        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center">
-          <CheckCircle2 className="w-5 h-5 text-white" />
+    // Clean, minimal toast
+    toast.custom(() => (
+      <div className="flex items-center gap-3 px-5 py-4 rounded-2xl bg-slate-900/95 border border-white/10 shadow-2xl backdrop-blur-xl min-w-[300px]">
+        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+          <CheckCircle2 className="w-4 h-4 text-emerald-400" />
         </div>
         <div className="flex-1">
-          <div className="flex items-center gap-2 mb-1">
-            <Sparkles className="w-4 h-4 text-ai" />
-            <span className="font-semibold text-white">
-              {language === 'zh' ? '申请成功' : 'You\'re on the list!'}
-            </span>
-          </div>
-          <p className="text-sm text-slate-300">
-            {language === 'zh' 
-              ? 'AI Doer 会在内测开放时通知你' 
-              : 'We\'ll notify you when AI Doer is ready for you'}
+          <p className="font-medium text-white text-sm">
+            {language === 'zh' ? '已加入候补名单' : 'You\'re on the list'}
           </p>
-          <div className="flex items-center gap-2 mt-2 text-xs text-ai/80">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-ai animate-pulse" />
-            {language === 'zh' ? '早期用户优先访问' : 'Early access priority'}
-          </div>
+          <p className="text-xs text-slate-400 mt-0.5">
+            {language === 'zh' ? '我们会尽快联系你' : 'We\'ll be in touch soon'}
+          </p>
         </div>
       </div>
     ), {
-      duration: 5000,
+      duration: 4000,
       position: 'top-center',
     });
 
