@@ -9,10 +9,10 @@ const HeroSection = () => {
   const [isTyping, setIsTyping] = useState(true);
   
   const steps = [
-    { action: language === 'zh' ? '分析请求' : 'Analyze request', status: 'done' },
-    { action: language === 'zh' ? '打开网站' : 'Open website', status: 'done' },
-    { action: language === 'zh' ? '填写表单' : 'Filling form', status: 'current' },
-    { action: language === 'zh' ? '提交完成' : 'Submit', status: 'pending' },
+    { action: language === 'zh' ? 'AI 正在理解你的请求' : 'AI is understanding your request', status: 'done' },
+    { action: language === 'zh' ? 'AI 正在导航到目标网站' : 'AI is navigating to the website', status: 'done' },
+    { action: language === 'zh' ? 'AI 正在填写表单内容' : 'AI is filling out the form', status: 'current' },
+    { action: language === 'zh' ? 'AI 正在提交并确认完成' : 'AI is submitting and confirming', status: 'pending' },
   ];
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const HeroSection = () => {
         style={{ background: 'hsl(185 100% 50%)' }} />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-[1fr_1.15fr] gap-12 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left">
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -160,39 +160,76 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Task Status Panel - positioned below/beside demo */}
-            <div className="mt-6 p-4 rounded-xl border border-white/10 backdrop-blur-sm" style={{
-              background: 'linear-gradient(180deg, hsl(220 20% 15% / 0.9) 0%, hsl(220 25% 10% / 0.9) 100%)'
+            {/* Task Status Panel - PROMINENT second visual focus */}
+            <div className="mt-8 p-6 rounded-2xl border-2 border-ai/30 backdrop-blur-md relative overflow-hidden" style={{
+              background: 'linear-gradient(135deg, hsl(220 25% 12% / 0.95) 0%, hsl(220 30% 8% / 0.98) 100%)',
+              boxShadow: '0 0 40px hsl(185 100% 50% / 0.15), inset 0 1px 0 hsl(185 100% 50% / 0.1)'
             }}>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-2 h-2 rounded-full bg-ai status-pulse" />
-                <span className="text-sm font-mono text-ai">
-                  {language === 'zh' ? '任务状态: 执行中' : 'Task status: Running'}
+              {/* Ambient glow effect */}
+              <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-ai/20 blur-3xl" />
+              
+              {/* Header with strong presence */}
+              <div className="flex items-center gap-3 mb-6 relative">
+                <div className="relative">
+                  <div className="w-3 h-3 rounded-full bg-ai" />
+                  <div className="absolute inset-0 w-3 h-3 rounded-full bg-ai animate-ping opacity-75" />
+                </div>
+                <span className="text-lg font-semibold text-ai tracking-wide">
+                  {language === 'zh' ? 'AI 正在工作' : 'AI is working'}
                 </span>
               </div>
 
-              <div className="space-y-2.5">
+              {/* Steps with enhanced visibility */}
+              <div className="space-y-4 relative">
                 {steps.map((step, index) => (
-                  <div key={index} className="flex items-center gap-3">
+                  <div 
+                    key={index} 
+                    className={`flex items-center gap-4 p-3 rounded-xl transition-all duration-500 ${
+                      index === currentStep 
+                        ? 'bg-ai/10 border border-ai/30' 
+                        : index < currentStep 
+                          ? 'opacity-60' 
+                          : 'opacity-40'
+                    }`}
+                  >
                     {index < currentStep ? (
-                      <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center">
-                        <Check className="w-3 h-3 text-accent" />
+                      <div className="w-7 h-7 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 border border-accent/30">
+                        <Check className="w-4 h-4 text-accent" />
                       </div>
                     ) : index === currentStep ? (
-                      <div className="w-5 h-5 rounded-full bg-ai/20 flex items-center justify-center">
-                        <Loader2 className="w-3 h-3 text-ai animate-spin" />
+                      <div className="w-7 h-7 rounded-full bg-ai/20 flex items-center justify-center flex-shrink-0 border border-ai/50 relative">
+                        <Loader2 className="w-4 h-4 text-ai animate-spin" />
+                        {/* Breathing glow */}
+                        <div className="absolute inset-0 rounded-full bg-ai/30 animate-pulse" style={{ animationDuration: '1.5s' }} />
                       </div>
                     ) : (
-                      <div className="w-5 h-5 rounded-full border border-white/20" />
+                      <div className="w-7 h-7 rounded-full border border-white/15 flex-shrink-0" />
                     )}
-                    <span className={`text-sm font-mono ${
-                      index < currentStep ? 'text-white/50' : 
-                      index === currentStep ? 'text-ai' : 'text-white/30'
+                    <span className={`text-base leading-relaxed transition-all duration-300 ${
+                      index < currentStep 
+                        ? 'text-white/50' 
+                        : index === currentStep 
+                          ? 'text-white font-medium' 
+                          : 'text-white/30'
                     }`}>
                       {step.action}
                     </span>
                   </div>
                 ))}
+              </div>
+
+              {/* Progress indicator */}
+              <div className="mt-6 pt-4 border-t border-white/10">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-white/40">{language === 'zh' ? '执行进度' : 'Execution progress'}</span>
+                  <span className="text-ai font-mono">{Math.round(((currentStep + 1) / steps.length) * 100)}%</span>
+                </div>
+                <div className="mt-2 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-ai to-primary rounded-full transition-all duration-700"
+                    style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
+                  />
+                </div>
               </div>
             </div>
           </div>
