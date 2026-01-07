@@ -54,27 +54,30 @@ const FeaturesSection = () => {
           {coreFeatures.map((feature, index) => (
             <div 
               key={index} 
-              className="group p-8 rounded-xl bg-card hover-lift transition-all duration-500"
+              className="group p-8 rounded-xl bg-card hover-lift transition-all duration-500 flex flex-col h-full"
             >
+              {/* Header - fixed height for alignment */}
               <div className="flex items-start gap-4 mb-5">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="w-6 h-6 text-primary" />
                 </div>
-                <div>
-                  <h3 className="font-heading text-xl font-semibold text-foreground mb-1">
+                <div className="min-h-[48px] flex flex-col justify-center">
+                  <h3 className="font-heading text-xl font-semibold text-foreground leading-tight">
                     {feature.title}
                   </h3>
-                  {feature.subtitle && (
-                    <span className="text-sm text-secondary-purple font-medium">{feature.subtitle}</span>
-                  )}
+                  <span className="text-sm text-secondary-purple font-medium h-5">
+                    {feature.subtitle || '\u00A0'}
+                  </span>
                 </div>
               </div>
 
-              <p className="text-muted-foreground mb-5 leading-relaxed">
+              {/* Description - fixed height */}
+              <p className="text-muted-foreground mb-5 leading-relaxed min-h-[48px]">
                 {feature.desc}
               </p>
 
-              <ul className="space-y-2.5 mb-5">
+              {/* Items list - flex-grow to push footer down */}
+              <ul className="space-y-2.5 mb-5 flex-grow">
                 {feature.items.map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm">
                     <Check className="w-4 h-4 text-accent flex-shrink-0" />
@@ -83,7 +86,8 @@ const FeaturesSection = () => {
                 ))}
               </ul>
 
-              <div className="pt-4 border-t border-border">
+              {/* Footer note - aligned at bottom */}
+              <div className="pt-4 border-t border-border mt-auto">
                 <p className="text-sm text-primary font-medium">
                   {feature.note}
                 </p>
