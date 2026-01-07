@@ -9,10 +9,10 @@ const HeroSection = () => {
   const [isTyping, setIsTyping] = useState(true);
   
   const steps = [
-    { action: language === 'zh' ? '分析请求' : 'Analyze request', status: 'done' },
-    { action: language === 'zh' ? '打开网站' : 'Open website', status: 'done' },
-    { action: language === 'zh' ? '填写表单' : 'Filling form', status: 'current' },
-    { action: language === 'zh' ? '提交完成' : 'Submit', status: 'pending' },
+    { action: language === 'zh' ? 'AI 正在理解你的请求' : 'AI is understanding your request', status: 'done' },
+    { action: language === 'zh' ? 'AI 正在打开目标网站' : 'AI is navigating to the website', status: 'done' },
+    { action: language === 'zh' ? 'AI 正在填写表单内容' : 'AI is filling in the form', status: 'current' },
+    { action: language === 'zh' ? 'AI 正在完成操作' : 'AI is completing the action', status: 'pending' },
   ];
 
   useEffect(() => {
