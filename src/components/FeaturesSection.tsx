@@ -4,108 +4,108 @@ import { MessageSquare, Repeat, Layers, Brain, Check } from 'lucide-react';
 const FeaturesSection = () => {
   const { t } = useLanguage();
   
-  const features = [
+  // Core features (first tier - emphasized)
+  const coreFeatures = [
     {
       icon: MessageSquare,
       title: t('feature1.title'),
       desc: t('feature1.desc'),
-      items: [t('feature1.item1'), t('feature1.item2'), t('feature1.item3')],
       note: t('feature1.best'),
-      gradient: 'from-blue-500 to-indigo-600'
+      items: [t('feature1.item1'), t('feature1.item2'), t('feature1.item3')],
     },
     {
       icon: Repeat,
       title: t('feature2.title'),
       subtitle: t('feature2.subtitle'),
       desc: t('feature2.desc'),
-      items: [t('feature2.item1'), t('feature2.item2'), t('feature2.item3')],
       note: t('feature2.note'),
-      gradient: 'from-violet-500 to-purple-600'
+      items: [t('feature2.item1'), t('feature2.item2'), t('feature2.item3')],
     },
+  ];
+
+  // Secondary features (second tier - less prominent)
+  const secondaryFeatures = [
     {
       icon: Layers,
       title: t('feature3.title'),
       desc: t('feature3.desc'),
-      items: [t('feature3.item1'), t('feature3.item2'), t('feature3.item3'), t('feature3.item4')],
       note: t('feature3.note'),
-      gradient: 'from-emerald-500 to-teal-600'
     },
     {
       icon: Brain,
       title: t('feature4.title'),
       desc: t('feature4.desc'),
-      items: [t('feature4.item1'), t('feature4.item2'), t('feature4.item3')],
       note: t('feature4.note'),
-      gradient: 'from-orange-500 to-red-500'
     }
   ];
 
   return (
-    <section id="features" className="py-24 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-[100px]" />
-      </div>
-
+    <section id="features" className="py-24 relative overflow-hidden bg-secondary/30">
       <div className="container mx-auto px-6 relative z-10">
+        {/* Title */}
         <div className="text-center mb-16">
-        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold">
-          <span className="text-gradient">{t('features.title')}</span>
-        </h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold">
+            <span className="text-gradient">{t('features.title')}</span>
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {features.map((feature, index) => (
+        {/* Core Features - emphasized, larger */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+          {coreFeatures.map((feature, index) => (
             <div 
               key={index} 
-              className="group bg-card rounded-lg p-6 hover-lift relative overflow-hidden border border-secondary-blue/20 hover:border-primary/30 shadow-soft transition-all duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group p-8 rounded-xl bg-card hover-lift transition-all duration-500"
             >
-              {/* Hover gradient overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-              
-              <div className="relative z-10">
-                <div className="flex items-start gap-4 mb-4">
-                  {/* Icon with circular background */}
-                  <div className="relative">
-                    <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${feature.gradient} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <feature.icon className="w-7 h-7 text-white" />
-                    </div>
-                    {/* Subtle ring */}
-                    <div className={`absolute -inset-1 rounded-full bg-gradient-to-br ${feature.gradient} opacity-20 blur-sm`} />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-lg font-bold text-primary group-hover:text-primary transition-colors">
-                      {feature.title}
-                    </h3>
-                    {feature.subtitle && (
-                      <span className="text-sm text-secondary-purple font-medium">{feature.subtitle}</span>
-                    )}
-                  </div>
+              <div className="flex items-start gap-4 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <feature.icon className="w-6 h-6 text-primary" />
                 </div>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-foreground mb-1">
+                    {feature.title}
+                  </h3>
+                  {feature.subtitle && (
+                    <span className="text-sm text-secondary-purple font-medium">{feature.subtitle}</span>
+                  )}
+                </div>
+              </div>
 
-                <p className="text-muted-foreground mb-5 text-sm leading-relaxed" style={{ lineHeight: '1.5' }}>
-                  {feature.desc}
+              <p className="text-muted-foreground mb-5 leading-relaxed">
+                {feature.desc}
+              </p>
+
+              <ul className="space-y-2.5 mb-5">
+                {feature.items.map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm">
+                    <Check className="w-4 h-4 text-accent flex-shrink-0" />
+                    <span className="text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="pt-4 border-t border-border">
+                <p className="text-sm text-primary font-medium">
+                  {feature.note}
                 </p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-                <ul className="space-y-3 mb-5">
-                  {feature.items.map((item, i) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                        <Check className="w-3 h-3 text-accent" />
-                      </div>
-                      <span className="text-sm text-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="pt-4 border-t border-border/50">
-                  <p className="text-sm text-primary font-semibold flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full" />
-                    {feature.note}
-                  </p>
-                </div>
+        {/* Secondary Features - smaller, less prominent */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {secondaryFeatures.map((feature, index) => (
+            <div 
+              key={index} 
+              className="group flex items-start gap-4 p-5 rounded-lg bg-card/50 hover:bg-card transition-colors duration-300"
+            >
+              <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors">
+                <feature.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground mb-2">{feature.desc}</p>
+                <p className="text-xs text-primary font-medium">{feature.note}</p>
               </div>
             </div>
           ))}

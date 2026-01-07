@@ -1,65 +1,84 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Monitor, Target, Shield, DollarSign, Eye } from 'lucide-react';
+import { Cloud, Monitor, Zap, Shield, DollarSign, Eye } from 'lucide-react';
 
 const LocalSection = () => {
-  const { t } = useLanguage();
-  
-  const benefits = [
-    { icon: Target, text: t('local.item1'), gradient: 'from-blue-500 to-indigo-600' },
-    { icon: Shield, text: t('local.item2'), gradient: 'from-emerald-500 to-teal-600' },
-    { icon: DollarSign, text: t('local.item3'), gradient: 'from-amber-500 to-orange-600' },
-    { icon: Eye, text: t('local.item4'), gradient: 'from-violet-500 to-purple-600' },
+  const { t, language } = useLanguage();
+
+  const comparisons = [
+    {
+      cloud: language === 'zh' ? '慢' : 'Slow',
+      local: language === 'zh' ? '即时' : 'Instant',
+      icon: Zap
+    },
+    {
+      cloud: language === 'zh' ? '有风险' : 'Risky',
+      local: language === 'zh' ? '私密' : 'Private',
+      icon: Shield
+    },
+    {
+      cloud: language === 'zh' ? '不稳定' : 'Unstable',
+      local: language === 'zh' ? '可靠' : 'Reliable',
+      icon: Eye
+    },
+    {
+      cloud: language === 'zh' ? '高成本' : 'Expensive',
+      local: language === 'zh' ? '低成本' : 'Affordable',
+      icon: DollarSign
+    },
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px]" />
-      </div>
-
+    <section className="py-24 relative overflow-hidden bg-secondary/30">
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-primary mb-8 shadow-glow-lg float">
-              <Monitor className="w-12 h-12 text-primary-foreground" />
-            </div>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
-            <span className="text-gradient">{t('local.title')}</span>
-          </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          {/* Title */}
+          <div className="text-center mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
+              <span className="text-gradient">{t('local.title')}</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
               {t('local.subtitle')}
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index} 
-                className="group bg-card rounded-lg p-6 text-center hover-lift border border-secondary-blue/20 hover:border-primary/30 shadow-soft transition-all duration-300"
-              >
-                {/* Circular icon with hover rotate */}
-                <div className={`w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br ${benefit.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-[5deg] transition-all duration-300`}>
-                  <benefit.icon className="w-7 h-7 text-white" />
-                </div>
-                <p className="font-medium text-foreground text-center">{benefit.text}</p>
+          {/* Visual comparison table */}
+          <div className="mt-12 mb-12">
+            {/* Headers */}
+            <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+              <div className="col-span-1" />
+              <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                <Cloud className="w-5 h-5" />
+                <span className="font-medium">{language === 'zh' ? '云端 AI' : 'Cloud AI'}</span>
               </div>
-            ))}
+              <div className="flex items-center justify-center gap-2 text-primary">
+                <Monitor className="w-5 h-5" />
+                <span className="font-medium">{language === 'zh' ? '本地 AI' : 'Local AI'}</span>
+              </div>
+            </div>
+
+            {/* Comparison rows */}
+            <div className="space-y-3">
+              {comparisons.map((item, index) => (
+                <div key={index} className="grid grid-cols-3 gap-4 items-center p-3 rounded-lg hover:bg-card transition-colors">
+                  <div className="flex items-center gap-3">
+                    <item.icon className="w-5 h-5 text-muted-foreground" />
+                  </div>
+                  <div className="text-center text-muted-foreground">
+                    {item.cloud}
+                  </div>
+                  <div className="text-center font-medium text-accent">
+                    {item.local}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="glass-strong rounded-2xl p-8 text-center relative overflow-hidden border border-primary/20">
-            {/* Gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5" />
-            
-            <div className="relative z-10 flex items-center justify-center gap-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <Eye className="w-4 h-4 text-primary-foreground" />
-              </div>
-              <p className="text-xl md:text-2xl font-heading font-bold text-primary">
-                {t('local.note')}
-              </p>
-            </div>
+          {/* Bottom note */}
+          <div className="text-center pt-8 border-t border-border">
+            <p className="text-xl font-heading font-medium text-foreground">
+              {t('local.note')}
+            </p>
           </div>
         </div>
       </div>

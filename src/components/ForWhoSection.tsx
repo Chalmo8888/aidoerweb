@@ -1,69 +1,83 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Check, Users, Star } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const ForWhoSection = () => {
-  const { t } = useLanguage();
-  const items = [t('forwho.item1'), t('forwho.item2'), t('forwho.item3'), t('forwho.item4')];
+  const { t, language } = useLanguage();
+
+  const roles = [
+    {
+      title: language === 'zh' ? '运营人员' : 'Operations',
+      task: language === 'zh' ? '每天手动发布内容到多个平台' : 'Publishing content across platforms daily',
+      result: language === 'zh' ? 'AI Doer 自动完成多平台发布' : 'AI Doer handles multi-platform publishing'
+    },
+    {
+      title: language === 'zh' ? '销售助理' : 'Sales Assistants',
+      task: language === 'zh' ? '在 CRM 中重复录入数据' : 'Repetitive data entry in CRM',
+      result: language === 'zh' ? 'AI Doer 自动同步客户信息' : 'AI Doer syncs customer info automatically'
+    },
+    {
+      title: language === 'zh' ? '内容创作者' : 'Content Creators',
+      task: language === 'zh' ? '在不同工具间复制粘贴' : 'Copy-pasting between different tools',
+      result: language === 'zh' ? 'AI Doer 处理跨工具操作' : 'AI Doer handles cross-tool operations'
+    },
+  ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
-      </div>
+    <section className="py-24 relative overflow-hidden bg-background">
+      {/* Section divider */}
+      <div className="absolute top-0 left-0 right-0 section-divider" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
-            <div className="text-center md:text-left mb-4 md:mb-0">
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
+          {/* Title */}
+          <div className="text-center mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
               {t('forwho.title')}
             </h2>
-            </div>
-            <div className="text-center md:text-right">
-              <span className="text-xs uppercase tracking-widest text-secondary-blue font-semibold">
-                {t('forwho.subtitle')}
-              </span>
-            </div>
+            <p className="text-muted-foreground">
+              {t('forwho.subtitle')}
+            </p>
           </div>
 
-          {/* Main card with gradient background */}
-          <div className="rounded-2xl p-8 md:p-12 relative overflow-hidden shadow-card" style={{ background: 'linear-gradient(180deg, hsl(210 30% 97%) 0%, hsl(215 25% 94%) 100%)' }}>
-            {/* Decorative gradient */}
-            <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-primary/10 to-transparent rounded-3xl" />
-            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-accent/10 to-transparent rounded-3xl" />
-            
-            <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-10">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow">
-                  <Users className="w-8 h-8 text-primary-foreground" />
+          {/* Description */}
+          <p className="text-center text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+            {t('forwho.desc')}
+          </p>
+
+          {/* Roles - simplified structure */}
+          <div className="space-y-6 mb-12">
+            {roles.map((role, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col md:flex-row md:items-center gap-4 p-6 rounded-lg bg-secondary/50 hover:bg-secondary/70 transition-colors duration-300"
+              >
+                {/* Role name */}
+                <div className="md:w-1/4">
+                  <h3 className="font-semibold text-foreground">{role.title}</h3>
                 </div>
-                <p className="text-lg text-muted-foreground flex-1">{t('forwho.desc')}</p>
-              </div>
+                
+                {/* What they do */}
+                <div className="md:w-2/5">
+                  <p className="text-muted-foreground text-sm">{role.task}</p>
+                </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-10">
-                {items.map((item, index) => (
-                  <div 
-                    key={index} 
-                    className="group flex items-center gap-4 p-5 rounded-lg bg-card/80 hover:bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover-lift shadow-sm"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <Check className="w-5 h-5 text-primary-foreground" />
-                    </div>
-                    <p className="text-foreground font-medium">{item}</p>
-                  </div>
-                ))}
+                {/* Arrow indicator */}
+                <div className="hidden md:block text-muted-foreground/30">→</div>
+                
+                {/* What AI Doer does */}
+                <div className="md:w-2/5 flex items-center gap-2">
+                  <Check className="w-4 h-4 text-accent flex-shrink-0" />
+                  <p className="text-foreground text-sm font-medium">{role.result}</p>
+                </div>
               </div>
+            ))}
+          </div>
 
-              <div className="pt-8 border-t border-border/50 text-center">
-                <p className="text-xl md:text-2xl font-heading font-semibold italic text-gradient inline-flex items-center gap-3">
-                  <Star className="w-6 h-6 text-yellow-500" />
-                  {t('forwho.think')}
-                  <Star className="w-6 h-6 text-yellow-500" />
-                </p>
-              </div>
-            </div>
+          {/* Key insight */}
+          <div className="text-center pt-8 border-t border-border">
+            <p className="text-xl font-heading font-medium text-foreground italic">
+              "{t('forwho.think')}"
+            </p>
           </div>
         </div>
       </div>
