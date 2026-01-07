@@ -9,6 +9,7 @@ const FeaturesSection = () => {
     {
       icon: MessageSquare,
       title: t('feature1.title'),
+      subtitle: t('feature1.subtitle'),
       desc: t('feature1.desc'),
       note: t('feature1.best'),
       items: [t('feature1.item1'), t('feature1.item2'), t('feature1.item3')],

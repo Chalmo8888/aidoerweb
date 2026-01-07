@@ -75,6 +75,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Features
     'features.title': 'What AI Doer does best',
     'feature1.title': 'Natural-language browser execution',
+    'feature1.subtitle': 'AI Executor',
     'feature1.desc': 'Describe a task once. AI Doer handles the execution — end to end.',
     'feature1.item1': 'Works with real websites',
     'feature1.item2': 'Handles multi-step processes',
@@ -226,6 +227,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Features
     'features.title': 'AI Doer 最擅长什么',
     'feature1.title': '自然语言浏览器执行',
+    'feature1.subtitle': 'AI 执行器',
     'feature1.desc': '描述一次任务，AI Doer 端到端处理执行。',
     'feature1.item1': '适用于真实网站',
     'feature1.item2': '处理多步骤流程',
