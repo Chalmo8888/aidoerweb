@@ -22,11 +22,6 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-border text-center">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} AI Doer. {t('footer.rights')}
-            </p>
-          </div>
         </div>
       </div>
     </footer>
